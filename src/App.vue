@@ -27,8 +27,8 @@
       <li class="flex-1">
         <a href="#timeline" class="flex flex-col items-center p-2 text-xs capitalize">
           <ClockIcon class="h-6 w-6" />
-          timeline</a
-        >
+          timeline
+        </a>
       </li>
       <li class="flex-1">
         <a href="#activities" class="flex flex-col items-center p-2 text-xs capitalize">
@@ -47,6 +47,8 @@
 </template>
 
 <script setup>
-import { CheckCircleIcon } from '@heroicons/vue/24/solid'
-import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
+  import { CheckCircleIcon } from '@heroicons/vue/24/solid';
+  import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline';
+
+  const nawItems = ['timeline', 'activities', 'progress'];
 </script>
