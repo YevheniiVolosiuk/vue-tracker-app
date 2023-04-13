@@ -24,21 +24,21 @@
   </main>
   <nav class="sticky bottom-0 z-20">
     <ul class="flex items-center justify-around border-t">
-      <li class=" flex-1 ">
+      <li class="flex-1">
         <a href="#timeline" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ClockIcon class="w-6 h-6" />
+          <ClockIcon class="h-6 w-6" />
           timeline</a
         >
       </li>
       <li class="flex-1">
         <a href="#activities" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ListBulletIcon class="w-6 h-6" />
+          <ListBulletIcon class="h-6 w-6" />
           activities
         </a>
       </li>
       <li class="flex-1">
         <a href="#progress" class="flex flex-col items-center p-2 text-xs capitalize">
-          <ChartBarIcon class="w-6 h-6" />
+          <ChartBarIcon class="h-6 w-6" />
           progress
         </a>
       </li>
