@@ -1,17 +1,5 @@
 <template>
-  <header class="sticky top-0 z-20 flex h-16 items-center justify-between border-b bg-white p-3">
-    <a href="#"> <img src="./assets/images/logo.png" alt="Logo" class="h-full w-48" /></a>
-    <a href="#" class="text-sm">
-      <div v-if="true" class="flex items-center justify-between gap-1">
-        Day complete !
-        <CheckCircleIcon class="w-7 text-green-500" />
-      </div>
-      <div v-else class="flex items-center justify-between gap-1">
-        Progress: <span class="font-mono">20%</span>
-        <div class="h-3 w-3 rounded-full bg-red-500"></div>
-      </div>
-    </a>
-  </header>
+  <TheHeader></TheHeader>
   <main class="flex flex-grow flex-col">
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque rem iste magni fugit illo
     minima aliquam a, omnis delectus, excepturi quaerat? Cumque laboriosam accusamus temporibus
@@ -22,25 +10,10 @@
     eligendi commodi provident sunt sed ullam quisquam et distinctio, dicta quis cupiditate optio
     blanditiis quaerat magni odit necessitatibus inventore! Numquam a quo quisquam eos?
   </main>
-  <nav class="sticky bottom-0 z-20">
-    <ul class="flex items-center justify-around border-t">
-      <li v-for="(icon, navName) in navIcons" :key="navName" class="flex-1">
-        <a :href="`#${navItem}`" class="flex flex-col items-center p-2 text-xs capitalize">
-            <component :is="icon" class="h-6 w-6" />
-          {{ navName }}
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <TheNav></TheNav>
 </template>
 
 <script setup>
-  import { CheckCircleIcon } from '@heroicons/vue/24/solid';
-  import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline';
-
-const navIcons = {
-    'timeline' : ClockIcon,
-    'activities' : ListBulletIcon,
-    'progress' : ChartBarIcon,
-};
+  import TheHeader from './components/TheHeader.vue';
+  import TheNav from './components/TheNav.vue';
 </script>
