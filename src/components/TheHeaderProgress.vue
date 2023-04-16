@@ -21,5 +21,5 @@
 </template>
 
 <script setup>
-import {CheckCircleIcon} from '@heroicons/vue/24/solid';
+import {CheckCircleIcon} from "@heroicons/vue/24/solid";
 </script>
