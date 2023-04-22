@@ -1,6 +1,6 @@
 <template>
     <a
-        href="#"
+        :href="`#${PAGE_PROGRESS}`"
         class="text-sm"
     >
         <div
@@ -21,5 +21,6 @@
 </template>
 
 <script setup>
+import {PAGE_PROGRESS} from "../constants";
 import {CheckCircleIcon} from "@heroicons/vue/24/solid";
 </script>

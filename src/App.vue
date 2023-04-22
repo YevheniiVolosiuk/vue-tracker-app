@@ -1,5 +1,5 @@
 <template>
-    <TheHeader></TheHeader>
+    <TheHeader @go-to-timeline="activePage = PAGE_TIMELINE" @go-to-progress="activePage = PAGE_PROGRESS"></TheHeader>
     <main class="flex flex-grow flex-col">
         <TheActivities v-show="activePage === PAGE_ACTIVITIES"></TheActivities>
         <TheProgress v-show="activePage === PAGE_PROGRESS"></TheProgress>

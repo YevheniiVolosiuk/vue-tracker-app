@@ -1,5 +1,5 @@
 <template>
-    <a href="#"
+    <a :href="`#${PAGE_TIMELINE}`"
         ><img
             src="../assets/images/logo.png"
             alt="Logo"
@@ -7,4 +7,6 @@
     /></a>
 </template>
 
-<script setup></script>
+<script setup>
+import {PAGE_TIMELINE} from "../constants";
+</script>
