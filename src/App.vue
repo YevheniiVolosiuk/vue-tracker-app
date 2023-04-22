@@ -1,7 +1,7 @@
 <template>
     <TheHeader
-        @go-to-timeline="activePage = PAGE_TIMELINE"
-        @go-to-progress="activePage = PAGE_PROGRESS"
+        @go-to-timeline="goTo(PAGE_TIMELINE)"
+        @go-to-progress="goTo(PAGE_PROGRESS)"
     ></TheHeader>
     <main class="flex flex-grow flex-col">
         <TheActivities v-show="activePage === PAGE_ACTIVITIES"></TheActivities>
@@ -25,4 +25,8 @@ import {getActiveHashPage} from "./functions";
 import {ref} from "vue";
 
 const activePage = ref(getActiveHashPage());
+
+function goTo(page){
+    activePage.value = page
+}
 </script>
