@@ -5,8 +5,8 @@
     ></TheHeader>
     <main class="flex flex-grow flex-col">
         <TheActivities v-show="activePage === PAGE_ACTIVITIES"></TheActivities>
-        <TheProgress v-show="activePage === PAGE_PROGRESS"></TheProgress>
-        <TheTimeline v-show="activePage === PAGE_TIMELINE"></TheTimeline>
+        <TheProgress v-show="activePage === PAGE_PROGRESS" ></TheProgress>
+        <TheTimeline v-show="activePage === PAGE_TIMELINE" :timeline-items="timelineItems"></TheTimeline>
     </main>
     <TheNav
         :active-page="activePage"
@@ -21,7 +21,7 @@ import TheTimeline from "./pages/TheTimeline.vue";
 import TheHeader from "./components/TheHeader.vue";
 import TheNav from "./components/TheNav.vue";
 import {PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE} from "./constants";
-import {getActiveHashPage} from "./functions";
+import {getActiveHashPage, genereteTimelineItems} from "./functions";
 import {ref} from "vue";
 
 const activePage = ref(getActiveHashPage());
@@ -29,4 +29,6 @@ const activePage = ref(getActiveHashPage());
 function goTo(page){
     activePage.value = page
 }
+
+const timelineItems = genereteTimelineItems();
 </script>
