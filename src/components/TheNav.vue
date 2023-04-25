@@ -19,11 +19,10 @@
 </template>
 
 <script setup>
-import {NAV_ITEMS} from '../constants'
+import {NAV_ITEMS} from "../constants";
 import NavItem from "./NavItem.vue";
 
 defineProps(["activePage"]);
 
 const emit = defineEmits(["navigate"]);
-
 </script>
