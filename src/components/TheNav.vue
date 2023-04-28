@@ -22,7 +22,12 @@
 import {NAV_ITEMS} from "../constants";
 import NavItem from "./NavItem.vue";
 
-defineProps(["activePage"]);
+defineProps({
+    activePage: {
+        type: String,
+        required: true,
+    }
+});
 
 const emit = defineEmits(["navigate"]);
 </script>
