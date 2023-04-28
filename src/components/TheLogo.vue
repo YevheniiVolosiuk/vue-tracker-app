@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import {PAGE_TIMELINE} from "../constants";
+import {PAGE_TIMELINE} from "@/constants";
 </script>

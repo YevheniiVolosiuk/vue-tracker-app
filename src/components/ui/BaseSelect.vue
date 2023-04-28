@@ -26,17 +26,20 @@
 import {XMarkIcon} from "@heroicons/vue/24/outline";
 import BaseButton from "./BaseButton.vue";
 
-//defineProps(["options", "placeholder", "selected"]);
-
 defineProps({
     selected: Number,
     options: {
         type: Array,
         required: true,
+        validator(options) {
+            return options.every(
+                ({value, label}) => typeof value === "number" && typeof label === "string"
+            );
+        },
     },
     placeholder: {
         type: String,
         required: true,
-    }
+    },
 });
 </script>
