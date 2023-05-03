@@ -20,15 +20,14 @@
 
 <script setup>
 import {NAV_ITEMS} from "@/constants";
+import {isPageValid} from "@/validators";
 import NavItem from "@/components/NavItem.vue";
 
 defineProps({
     activePage: {
         type: String,
         required: true,
-        validator(activePage) {
-            return Object.keys(NAV_ITEMS).includes(activePage);
-        },
+        validator: isPageValid,
     },
 });
 
