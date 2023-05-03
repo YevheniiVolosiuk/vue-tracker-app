@@ -1,7 +1,6 @@
 <template>
     <TheHeader
-        @go-to-timeline="goTo(PAGE_TIMELINE)"
-        @go-to-progress="goTo(PAGE_PROGRESS)"
+        @navigate="goTo($event)"
     ></TheHeader>
     <main class="flex flex-grow flex-col">
         <TheActivities v-show="activePage === PAGE_ACTIVITIES"></TheActivities>
@@ -10,7 +9,7 @@
     </main>
     <TheNav
         :active-page="activePage"
-        @navigate="activePage = $event"
+        @navigate="goTo($event)"
     ></TheNav>
 </template>
 
