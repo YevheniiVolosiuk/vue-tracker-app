@@ -28,17 +28,20 @@ const props = defineProps({
     }
 });
 
-const selectedActivityId = 2;
-const options = [
-    {value: 0, label: "Coding"},
-    {value: 1, label: "Reading"},
-    {value: 2, label: "Trainig"},
-];
-
 const hourLinkClasses = [
     "absolute -top-4 left-1/2 -translate-x-1/2 rounded px-2 font-mono text-lg",
     props.timelineItem.hour === new Date().getHours()
         ? "bg-purple-900 font-black text-white"
         : "bg-grey-900 text-gray-500",
 ];
+
+const options = [
+    {value: 1, label: "Coding"},
+    {value: 2, label: "Reading"},
+    {value: 3, label: "Trainig"},
+];
+
+const selectedActivityId = 3;
+
+
 </script>
