@@ -12,7 +12,7 @@
 
 <script setup>
 import TimelineItem from "@/components/TimelineItem.vue";
-import { validateTimelineItems } from "../validators";
+import { validateTimelineItems } from "@/validators";
 
 defineProps({
     timelineItems: {

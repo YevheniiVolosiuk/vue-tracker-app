@@ -3,10 +3,11 @@
         <a
             href="#"
             :class="hourLinkClasses"
-            >{{ props.timelineItem.hour }}:00</a
+            >{{ timelineItem.hour }}:00</a
         >
         <div class="flex gap-2">
             <BaseSelect
+                @select="selectedActivityId = $event"
                 :selected="selectedActivityId"
                 :options="options"
                 placeholder="Reset"
@@ -16,16 +17,16 @@
 </template>
 
 <script setup>
-
+import {ref} from "vue";
+import {isTimelineItemValid} from "@/validators";
 import BaseSelect from "@/components/ui/BaseSelect.vue";
-import { isTimelineItemValid } from '@/validators';
 
 const props = defineProps({
     timelineItem: {
         type: Object,
         required: true,
         validator: isTimelineItemValid,
-    }
+    },
 });
 
 const hourLinkClasses = [
@@ -41,7 +42,5 @@ const options = [
     {value: 3, label: "Trainig"},
 ];
 
-const selectedActivityId = 3;
-
-
+const selectedActivityId = ref(1);
 </script>
