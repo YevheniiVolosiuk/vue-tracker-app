@@ -5,7 +5,7 @@
                 v-for="timelineItem in timelineItems"
                 :key="timelineItem.hour"
                 :timeline-item="timelineItem"
-            />
+             />
         </ul>
     </div>
 </template>
