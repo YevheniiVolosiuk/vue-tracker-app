@@ -49,7 +49,7 @@ function isNumber(value) {
     return typeof value === "number";
 }
 
-function isString(value) {
+export function isString(value) {
     return typeof value === "string";
 }
 

@@ -3,6 +3,7 @@
         <XMarkIcon class="h-8" />
     </BaseButton>
     <select
+        :class="$attrs"
         @change="emit('select', +$event.target.value)"
         class="w-full truncate rounded bg-gray-100 px-2 py-1 text-2xl"
     >
