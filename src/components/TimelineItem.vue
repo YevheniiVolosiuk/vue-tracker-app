@@ -1,22 +1,22 @@
 <template>
     <li class="relative flex flex-col gap-2 border-t border-gray-200 px-4 py-10">
-        <TimelineHour :hour="timelineItem.hour"/>
+        <TimelineHour :hour="timelineItem.hour" />
         <div class="flex gap-2">
             <BaseSelect
+                placeholder="Reset"
                 @select="selectedActivityId = $event"
                 :selected="selectedActivityId"
-                :options="options"
-                placeholder="Reset"
+                :options="activitySelectOptions"
             />
         </div>
     </li>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import {isTimelineItemValid} from "@/validators";
+import {ref} from "vue";
 import BaseSelect from "@/components/ui/BaseSelect.vue";
 import TimelineHour from "@/components/TimelineHour.vue";
+import {isTimelineItemValid, validateSelectOptions} from "@/validators";
 
 defineProps({
     timelineItem: {
@@ -24,13 +24,12 @@ defineProps({
         required: true,
         validator: isTimelineItemValid,
     },
+    activitySelectOptions: {
+        type: Array,
+        required: true,
+        validator: validateSelectOptions,
+    },
 });
 
-const options = [
-    {value: 1, label: "Coding"},
-    {value: 2, label: "Reading"},
-    {value: 3, label: "Trainig"},
-];
-
-const selectedActivityId = ref(1);
+const selectedActivityId = ref(0);
 </script>
