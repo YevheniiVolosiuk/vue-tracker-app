@@ -47,12 +47,12 @@ export function validateSelectOptions(options) {
 }
 
 //---------------------------------------------------------------- Private functions
-function isNotEmptyString(activity) {
-    return isString(activity) && activity.length > 0;
+function isSelectOptionValid({value, label}) {
+    return isNumber(value) && isNotEmptyString(label);
 }
 
-function isSelectOptionValid({value, label}) {
-    return isNumber(value) && isString(label);
+function isNotEmptyString(activity) {
+    return isString(activity) && activity.length > 0;
 }
 
 function isBetween(value, start, end) {
