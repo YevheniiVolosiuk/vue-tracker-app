@@ -59,7 +59,7 @@ function isBetween(value, start, end) {
     return value >= start && value <= end;
 }
 
-function isUndefined(value) {
+export function isUndefined(value) {
     return typeof value === "undefined";
 }
 
@@ -67,7 +67,7 @@ function isNull(value) {
     return value === null;
 }
 
-function isNumber(value) {
+export function isNumber(value) {
     return typeof value === "number";
 }
 
