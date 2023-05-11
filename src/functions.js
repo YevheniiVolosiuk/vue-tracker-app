@@ -1,5 +1,5 @@
-import {PAGE_TIMELINE, HOURS_IN_DAY, MIDNIGHT_HOUR} from "@/constants";
 import {isPageValid} from "@/validators";
+import {PAGE_TIMELINE, HOURS_IN_DAY, MIDNIGHT_HOUR} from "@/constants";
 
 export function getActiveHashPage() {
     const page = window.location.hash.slice(1);
@@ -20,4 +20,8 @@ export function genereteTimelineItems() {
     }
 
     return timelineItems;
+}
+
+export function genereteActivitySelectOptions(activities) {
+    return activities.map((label, value) => ({label, value}));
 }
