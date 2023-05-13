@@ -1,5 +1,8 @@
 <template>
-    <BaseButton @click="emit('select', null)">
+    <BaseButton
+        :type="BUTTON_TYPE_NEUTRAL"
+        @click="emit('select', null)"
+    >
         <XMarkIcon class="h-8" />
     </BaseButton>
     <select
@@ -27,10 +30,11 @@
 </template>
 
 <script setup>
+import {computed} from "vue";
 import {XMarkIcon} from "@heroicons/vue/24/outline";
 import BaseButton from "@/components/ui/BaseButton.vue";
+import { BUTTON_TYPE_NEUTRAL } from "@/constants";
 import {validateSelectOptions, isUndefinedOrNull, isNumberOrNull} from "@/validators";
-import {computed} from "vue";
 
 const emit = defineEmits({
     select: isNumberOrNull,
