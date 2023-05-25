@@ -1,11 +1,12 @@
 import {ClockIcon, ListBulletIcon, ChartBarIcon} from "@heroicons/vue/24/outline";
-
+//import {generateActivities} from "@/function";
 //---------------------------------------------------------------- Time Constants
 export const HOURS_IN_DAY = 24;
+export const SECONDS_IN_HOUR = 3600;
 export const MIDNIGHT_HOUR = 0;
 
 //---------------------------------------------------------------- Activity Constants
-export const ACTIVITIES = ["Coding", "Reading", "Training"];
+//export const ACTIVITIES = generateActivities();
 
 export const PERIOD_SELECT_OPTIONS = [
     {value: 15, label: "0:15"},

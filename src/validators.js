@@ -20,8 +20,8 @@ export function validateActivities(activities) {
     return activities.every(isActivityValid);
 }
 
-export function isActivityValid(activity) {
-    return isNotEmptyString(activity);
+export function isActivityValid({name,secondsToComplete}) {
+    return isNotEmptyString(name) && isNumber(secondsToComplete);
 }
 
 //---------------------------------------------------------------- Helpers
